@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./style.css">
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/highcharts-3d.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <script src="https://code.highcharts.com/modules/export-data.js"></script>
         <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -15,7 +16,17 @@
     <body>
         <div>
             <figure class="highcharts-figure">
-                <div id="container"></div>
+                <div id="container-usd"></div>
+                <p class="highcharts-description">
+                    Поясняющая надпись
+                </p>
+            </figure>
+        </div>
+
+
+        <div>
+            <figure class="highcharts-figure">
+                <div id="container-usdt"></div>
                 <p class="highcharts-description">
                     Поясняющая надпись
                 </p>
@@ -23,7 +34,16 @@
         </div>
         
 
+
+        <figure class="highcharts-figure">
+            <div id="container-persent"></div>
+            <p class="highcharts-description">
+                Поясняющая надпись
+            </p>
+        </figure>
         
-        <script src="./script.js"></script>
+        <script src="./script-usd.js"></script>
+        <script src="./script-usdt.js"></script>
+        <script src="./script-persent.js"></script>
     </body>
 </html>

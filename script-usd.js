@@ -1,14 +1,14 @@
 // Data retrieved from https://www.vikjavev.no/ver/snjomengd
 
-Highcharts.chart("container", {
+Highcharts.chart("container-usd", {
   chart: {
     type: "spline",
   },
   title: {
-    text: "Показатель доходности по валютным (классическим) договорам",
+    text: "Сводный показатель доходности по валютным (классическим) договорам",
   },
   subtitle: {
-    text: "Статистические данные по месяцам",
+    text: "Статистические данные по месяцам за весь период работы фонда",
   },
   xAxis: {
     type: "datetime",
@@ -25,7 +25,8 @@ Highcharts.chart("container", {
     title: {
       text: "Доходность в (%)",
     },
-    min: 0,
+    min: -1,
+    max: 6,
   },
   tooltip: {
     headerFormat: "<b>{series.name}</b><br>",
@@ -36,7 +37,7 @@ Highcharts.chart("container", {
     series: {
       marker: {
         enabled: true,
-        radius: 6.5,
+        radius: 1.5,
       },
     },
   },
@@ -111,13 +112,12 @@ Highcharts.chart("container", {
       ],
     },
     {
-        name: "2023 год",
-        data: [
-          [Date.UTC(2019, 0, 1), 2.2], //январь
-          [Date.UTC(2019, 1, 1), 2.3], //февраль
-          [Date.UTC(2019, 2, 1), 2], //март
-         
-        ],
-      }
+      name: "2023 год",
+      data: [
+        [Date.UTC(2019, 0, 1), 2.2], //январь
+        [Date.UTC(2019, 1, 1), 2.3], //февраль
+        [Date.UTC(2019, 2, 1), 2], //март
+      ],
+    },
   ],
 });
